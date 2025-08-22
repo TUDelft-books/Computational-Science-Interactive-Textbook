@@ -31,7 +31,15 @@ import matplotlib.pyplot as plt
 import sys
 import h5py
 sys.path.insert(1, '/validate_answers/Numerical_differentiation')
-#from validate_answers import *
+import validate_answers
+print(validate_answers.unique()) # test function that raises error (seems whole module is not loaded)
+
+with open('data.txt') as f:
+    for line in f:
+        print(f) # this seems to work okay so I am not sure which files in this repo are available to the code (os.listidr() says this data.txt file is not here)
+
+with h5py.File("values.hdf5", "r") as f:
+    print(np.array(f))   # the error from this suggests the file is corrupt/missing but I can use this command in a normal python interpreter and the file loads fine
 
 # I like bigger plots: setting a higher DPI makes the fonts bigger
 plt.rcParams['figure.dpi']=100
