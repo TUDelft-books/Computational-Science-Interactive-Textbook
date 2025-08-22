@@ -1,10 +1,11 @@
 import h5py
+import json
 import os.path
 import numpy as np
 
 # A library for saving and checking answers for notebooks
 
-location = "./values.hdf5"
+location = "./values.json"
 
 def unique():
     print("NEW CONTENT")
@@ -51,9 +52,10 @@ def check_answer(value, key, atol=None):
     if not os.path.isfile(location):
         print("(NEW) Missing answers file, instructor must run all cells then run cell at end of notebook to generate file")
         return(True, "")
-    with h5py.File(location, "r") as f:
+    with open(location) as f:
+        d = json.load(f)
         try:
-            sol_answer = np.array(f[key]) 
+            sol_answer = np.array(d[key]) 
         except: 
             print("Missing key, instructor must run all cells to generate and save answers")
             return(True, "")
@@ -86,10 +88,9 @@ def check_answer(value, key, atol=None):
         str(format_difference(sol_answer, student_answer, atol))
         return (False, msg)
 
-# student_answer = np.array([1.0,2.0,3.0])
-# sol_answer = np.array([1,np.nan,np.nan])
-# np.allclose()
+"""
+student_answer = np.array([1.0,2.0,3.0])
+sol_answer = np.array([1,np.nan,np.nan])
 
-# ~np.isnan(sol_answer)
-
-# sol_answer[~np.isnan(sol_answer)]
+check_answer(sol_answer, "answer_3_01_1")
+"""
