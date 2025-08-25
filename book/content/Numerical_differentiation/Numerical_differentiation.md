@@ -13,8 +13,7 @@ jupyter:
     name: python3
 ---
 
-#```python tags=["hide-input", "auto-execute-page"]
-```python tags=["auto-execute-page", "thebe-init"]
+```python tags=["auto-execute-page", "thebe-init", "hide-input"]
 ## Code that will be run as soon as the page is loaded but hidden from the students.
 
 # Load the answers (but leave other imports so the students can see them)
