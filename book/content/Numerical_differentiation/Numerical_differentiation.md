@@ -13,17 +13,6 @@ jupyter:
     name: python3
 ---
 
-```python tags=["auto-execute-page", "thebe-init", "hide-input"]
-## Code that will be run as soon as the page is loaded but hidden from the students.
-
-# Load the answers (but leave other imports so the students can see them)
-import sys
-await micropip.install("numpy")
-from validate_answers import *
-
-with open(location):
-    pass # Initially this notebook does not recognise the file unless someone tries to read it first
-```
 
 
 # Numerical Differentiation 
@@ -1192,4 +1181,15 @@ plt.ylabel("y")
 
 plt.tight_layout()
 plt.show()
+```
+
+```python tags=["auto-execute-page", "thebe-init", "hide-input"]
+## Pre-loading the solutions
+
+import sys
+await micropip.install("numpy")
+from validate_answers import *
+
+with open(location):
+    pass # Initially this notebook does not recognise the file unless someone tries to read it first
 ```
