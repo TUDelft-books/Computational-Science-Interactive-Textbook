@@ -19,13 +19,11 @@ jupyter:
 
 # Load the answers (but leave other imports so the students can see them)
 import sys
-#sys.path.insert(1, '/validate_answers/Numerical_differentiation')
+await micropip.install("numpy")
 from validate_answers import *
+
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
-
-# test
-print(check_answer(None, "answer_3_01_1"))
 ```
 
 
@@ -1195,18 +1193,4 @@ plt.ylabel("y")
 
 plt.tight_layout()
 plt.show()
-```
-
-```python 
-### BEGIN SOLUTION template = 'Make sure to restart your notebook and run all cells (Kernel / Restart & Run all) before you submit!'
-
-# Update the answers in the answer file based on the variables in the namespace of this notebook
-
-all_answers = [s for s in dir() if "answer_" in s ]
-for answer in all_answers:
-    print("Saving answer: ", answer)
-    value = eval(answer)
-    save_answer(value, answer)
-    
-### END SOLUTION
 ```
