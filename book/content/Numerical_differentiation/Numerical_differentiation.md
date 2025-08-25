@@ -19,7 +19,7 @@ jupyter:
 
 # Load the answers (but leave other imports so the students can see them)
 import sys
-sys.path.insert(1, '/validate_answers/Numerical_differentiation')
+#sys.path.insert(1, '/validate_answers/Numerical_differentiation')
 from validate_answers import *
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
