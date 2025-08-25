@@ -1,4 +1,3 @@
-import h5py
 import json
 import os.path
 import numpy as np
@@ -38,6 +37,7 @@ def format_difference(A,B,atol):
                         return msg
     return msg    
 
+""" Depricated but may be needed in future
 def save_answer(value, key):
     if not os.path.isfile(location):
         open(location, "x")
@@ -47,6 +47,7 @@ def save_answer(value, key):
         except: 
             print("Creating new key %s" % key)
         f.create_dataset(key, data=value)
+"""
 
 def check_answer(value, key, atol=None):
     if not os.path.isfile(location):

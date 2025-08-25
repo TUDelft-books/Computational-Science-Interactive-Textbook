@@ -14,7 +14,7 @@ jupyter:
 ---
 
 #```python tags=["hide-input", "auto-execute-page"]
-```python tags=["auto-execute-page"]
+```python tags=["auto-execute-page", "thebe-init"]
 ## Code that will be run as soon as the page is loaded but hidden from the students.
 
 # Load the answers (but leave other imports so the students can see them)
@@ -25,7 +25,7 @@ with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
 
 # test
-print(validate_answers.check_answer(None, "answer_3_01_1"))
+print(check_answer(None, "answer_3_01_1"))
 ```
 
 
