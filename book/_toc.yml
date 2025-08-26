@@ -5,3 +5,4 @@ parts:
    numbered: True
    chapters: 
    - file: content/Numerical_differentiation/Numerical_differentiation.ipynb
+   - file: content/Numerical_integration/Numerical_integration.ipynb
