@@ -4,13 +4,13 @@
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
 # <div class="toc"><ul class="toc-item"></ul></div>
 
-import h5py
+import json
 import os.path
 import numpy as np
 
 # A library for saving and checking answers for notebooks
 
-location = "values.hdf5"
+location = "values.json"
 
 # For outputting matrices in a somewhat readable way...
 def format_difference(A,B,atol):
@@ -39,6 +39,7 @@ def format_difference(A,B,atol):
                         return msg
     return msg    
 
+""" Depricated for now
 def save_answer(value, key):
     if not os.path.isfile(location):
         open(location, "x")
@@ -48,12 +49,14 @@ def save_answer(value, key):
         except: 
             print("Creating new key %s" % key)
         f.create_dataset(key, data=value)
+"""
 
 def check_answer(value, key, atol=None):
     if not os.path.isfile(location):
         print("Missing answers file, instructor must run all cells then run cell at end of notebook to generate file")
         return(True, "")
-    with h5py.File(location, "r") as f:
+    with open(location) as f:
+        d = json.load(f)
         try:
             sol_answer = np.array(f[key]) 
         except: 
