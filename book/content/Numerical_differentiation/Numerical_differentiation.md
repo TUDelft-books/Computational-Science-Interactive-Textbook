@@ -1188,6 +1188,7 @@ plt.show()
 
 import sys
 await micropip.install("numpy")
+sys.path.insert(1, '/validate_answers/../')
 from validate_answers import *
 
 with open(location):
