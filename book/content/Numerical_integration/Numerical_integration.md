@@ -694,6 +694,7 @@ Because all of the functions above work with vectorization (see notebook 2b), th
 
 import sys
 await micropip.install("numpy")
+sys.path.insert(1, '/validate_answers/../')
 from validate_answers import *
 
 with open(location):
