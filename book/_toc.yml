@@ -8,3 +8,4 @@ parts:
    - file: content/Numerical_integration/Numerical_integration.ipynb
    - file: content/Root_finding/Root_finding.ipynb
    - file: content/Linear_algebra/Linear_algebra.ipynb
+   - file: content/Fourier_transforms_1/Fourier_transforms_1.ipynb
