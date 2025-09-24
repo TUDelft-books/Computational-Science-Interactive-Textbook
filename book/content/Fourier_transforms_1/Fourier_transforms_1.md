@@ -26,12 +26,12 @@ At the end of the notebook, we will also explore an example of using the FFT to 
 3. Convert the fourier-transformed data into a physically meaningful power spectrum with the correct units
 4. Use the FFT to determine the frequency and amplitude of weak periodic signals in noisy data
 
-```python nbgrader={"grade": false, "grade_id": "cell-8883bb3e2cb6fa16", "locked": true, "schema_version": 3, "solution": false, "task": false}
+```python 
 # Initialisation code for the notebook
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
-from validate_answers import *
+
 plt.rcParams['figure.figsize'] = (10,4)
 plt.rcParams['figure.dpi'] = 100
 ```
@@ -1012,16 +1012,13 @@ answer_7_11_2 = np.copy(v_sine)
 
 I'm not sure about you, but I would have a lot of trouble seeing the sine wave oscillations in the original data! But from the FFT, we know that they are there: this is the magic of spectral analysis!
 
-```python nbgrader={"schema_version": 3, "solution": true, "grade": false, "locked": false, "task": false, "grade_id": "cell-c1a626a1573ad6e6"}
-### BEGIN SOLUTION template = 'Make sure to restart your notebook and run all cells (Kernel / Restart & Run all) before you submit!'
+```python tags=["auto-execute-page", "thebe-init", "hide-input"]
+## Pre-loading the solutions
 
-# Update the answers in the answer file based on the variables in the namespace of this notebook
+import sys
+await micropip.install("numpy")
+from validate_answers import *
 
-all_answers = [s for s in dir() if "answer_" in s ]
-for answer in all_answers:
-    print("Saving answer: ", answer)
-    value = eval(answer)
-    save_answer(value, answer)
-    
-### END SOLUTION
+with open(location):
+    pass # Initially this notebook does not recognise the file unless someone tries to read it first
 ```
