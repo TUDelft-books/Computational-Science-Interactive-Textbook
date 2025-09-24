@@ -95,4 +95,4 @@ student_answer = np.array([1.0,2.0,3.0])
 sol_answer = np.array([1,np.nan,np.nan])
 
 check_answer(sol_answer, "answer_3_01_1")
-"""
+""" 
