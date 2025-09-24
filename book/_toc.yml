@@ -9,3 +9,4 @@ parts:
    - file: content/Root_finding/Root_finding.ipynb
    - file: content/Linear_algebra/Linear_algebra.ipynb
    - file: content/Fourier_transforms_1/Fourier_transforms_1.ipynb
+   - file: content/Fourier_transforms_2/Fourier_transforms_2.ipynb

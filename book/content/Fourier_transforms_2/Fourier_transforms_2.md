@@ -27,12 +27,11 @@ In this lecture notebook, you will explore the application of the 1D FFT for fil
 4. Construct 2D images of mask patterns and calculate the far-field diffraction pattern
 
 
-```python nbgrader={"grade": false, "grade_id": "cell-6017e4e7beb305c3", "locked": true, "schema_version": 3, "solution": false, "task": false}
+```python 
 # Initialisation code for the notebook
 import numpy as np
 import matplotlib.pyplot as plt
-import sys
-from validate_answers import *
+
 plt.rcParams['figure.dpi'] = 100
 ```
 
@@ -55,7 +54,7 @@ $$
 
 where $\tau = RC$ is the RC time constant of the circuit, and $\theta(t)$ is a step function. We can see what this looks like using this code:
 
-```python nbgrader={"grade": false, "grade_id": "cell-df68fb6c3f4a93b7", "locked": true, "schema_version": 3, "solution": false, "task": false}
+```python 
 # Notebook code 
 tau = 1
 plt.figure(figsize=(12,3))
@@ -74,7 +73,7 @@ $$
 
 A nice way to understand what this does is to make a plot. The output voltage $V_{out}$ at time $t_0$ is a "weighted average" of all the input voltages $V_{in}$ at times $t < t_0$ where the "weighing factor" is given by the function $h(-\tau)$ that is decaying exponentially "backwards" in time:
 
-```python nbgrader={"grade": false, "grade_id": "cell-c3834deba8216066", "locked": true, "schema_version": 3, "solution": false, "task": false}
+```python
 # Notebook code 
 fix, ax = plt.subplots(figsize=(12,3))
 vin = np.random.normal(size=len(t))*0.05
@@ -123,7 +122,7 @@ $$
 
 You can see a plot of the transfer function for an RC filter here: 
 
-```python nbgrader={"grade": false, "grade_id": "cell-d62313ea0788dd61", "locked": true, "schema_version": 3, "solution": false, "task": false}
+```python
 # Notebook code 
 tau = 1
 w = np.geomspace(1e-3,1e3, 100)
@@ -674,18 +673,14 @@ interact(update, zoom=(20,1000,10), v_index=(1,N-1,1))
 ```
 
 Can you understand where the funky patterns you see come from?
-<!-- #endregion -->
 
-```python nbgrader={"schema_version": 3, "solution": true, "grade": false, "locked": false, "task": false, "grade_id": "cell-48f3d5de6c5a9ad9"}
-### BEGIN SOLUTION template = 'Make sure to restart your notebook and run all cells (Kernel / Restart & Run all) before you submit!'
+```python tags=["auto-execute-page", "thebe-init", "hide-input"]
+## Pre-loading the solutions
 
-# Update the answers in the answer file based on the variables in the namespace of this notebook
+import sys
+await micropip.install("numpy")
+from validate_answers import *
 
-all_answers = [s for s in dir() if "answer_" in s ]
-for answer in all_answers:
-    print("Saving answer: ", answer)
-    value = eval(answer)
-    save_answer(value, answer)
-    
-### END SOLUTION
+with open(location):
+    pass # Initially this notebook does not recognise the file unless someone tries to read it first
 ```
