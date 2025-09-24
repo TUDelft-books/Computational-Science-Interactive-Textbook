@@ -39,8 +39,8 @@ def complex_list_to_real_and_imag_dict(data):
     reals = []
     imags = []
     for dat in data:
-        reals = dat.real
-        imags = dat.imag
+        reals.append(dat.real)
+        imags.append(dat.imag)
     out_dict = {}
     out_dict['real'] = reals
     out_dict['imag'] = imags

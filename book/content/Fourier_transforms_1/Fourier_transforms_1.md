@@ -30,7 +30,6 @@ At the end of the notebook, we will also explore an example of using the FFT to 
 # Initialisation code for the notebook
 import numpy as np
 import matplotlib.pyplot as plt
-import sys
 
 plt.rcParams['figure.figsize'] = (10,4)
 plt.rcParams['figure.dpi'] = 100
@@ -717,7 +716,7 @@ With this normalisation, the power spectrum peak has the same height independent
 
 **Exercise 8:** The dataset "data.dat" for lecture 7 contains two columns. The second column represents a measured voltage in Volts, and the first column represents the time of the measurement in seconds. The data points are measured at a constant sampling rate. Load the dataset and make a plot voltage vs. time.
 
-note: The path to the data.dat file is: "./resource/asnlib/public/data.dat"
+note: The path to the data.dat file is: "data.dat"
 
 
 ```python
@@ -760,7 +759,7 @@ assert passed == True, feedback
 # t = data[___,___]
 # v = data[___,___]
 ### BEGIN SOLUTION
-data = np.loadtxt("resource/asnlib/public/data.dat")
+data = np.loadtxt("data.dat")
 t = data[:,0]
 v = data[:,1]
 ### END SOLUTION
