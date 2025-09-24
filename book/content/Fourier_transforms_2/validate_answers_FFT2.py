@@ -12,7 +12,7 @@ import numpy as np
 # A library for saving and checking answers for notebooks
 
 location = "./values_part_1.json"
-location2 = "./values_answer_8_2c_1.json"
+location2 = "./values_answer_8_2c_1.npy"
 
 # For outputting matrices in a somewhat readable way...
 def format_difference(A,B,atol):
