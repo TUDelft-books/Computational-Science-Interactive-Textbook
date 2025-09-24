@@ -679,7 +679,7 @@ Can you understand where the funky patterns you see come from?
 
 import sys
 await micropip.install("numpy")
-from validate_answers import *
+from validate_answers_FFT2 import *
 
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
