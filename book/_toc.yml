@@ -7,3 +7,4 @@ parts:
    - file: content/Numerical_differentiation/Numerical_differentiation.ipynb
    - file: content/Numerical_integration/Numerical_integration.ipynb
    - file: content/Root_finding/Root_finding.ipynb
+   - file: content/Linear_algebra/Linear_algebra.ipynb
