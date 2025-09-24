@@ -1017,7 +1017,7 @@ I'm not sure about you, but I would have a lot of trouble seeing the sine wave o
 
 import sys
 await micropip.install("numpy")
-from validate_answers import *
+from validate_answers_complex import *
 
 with open(location):
     pass # Initially this notebook does not recognise the file unless someone tries to read it first
