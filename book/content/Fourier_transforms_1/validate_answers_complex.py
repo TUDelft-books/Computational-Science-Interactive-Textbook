@@ -58,7 +58,6 @@ def check_answer(value, key, atol=None):
                 sol_answer = np.array(reals) + 1j*np.array(imags)
             else:
                 sol_answer = np.array(d[key]) 
-            print(sol_answer)
         except KeyError:
             print("Missing key, instructor must run all cells to generate and save answers")
             return(True, "")
