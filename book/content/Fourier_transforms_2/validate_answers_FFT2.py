@@ -60,7 +60,7 @@ def check_answer(value, key, atol=None):
     # Load the two partial files and combine them 
     with open(location) as f:
         d1 = json.load(f)
-    array_for_answer_8_2c_1 = np.load(location2)
+    array_for_answer_8_2c_1 = np.load(location2, allow_pickle=True)
     d2 = {'answer_8_2c_1': list(array_for_answer_8_2c_1)}
     d = d1|d2 # Combine the partial dicts into one dict
 
