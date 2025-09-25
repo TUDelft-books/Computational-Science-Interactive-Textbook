@@ -209,42 +209,7 @@ answer_14_1_1 = T.copy()
 ```
 
 
-Let's take a look at the results. One way we can do this is using an interactive widget:
-
-```python nbgrader={"grade": false, "grade_id": "cell-851b0c1b38f67465", "locked": false, "schema_version": 3, "solution": true, "task": false}
-# Notebook code
-from ipywidgets import interact
-
-tc = 0
-plt.subplots(figsize=(9.5,4))
-plt.subplot(121)
-lims = (t[0], t[-1], x[0], x[-1])
-plt.imshow(np.flip(T,axis=1).T, aspect='auto', extent=[t[0], t[-1], x[0], x[-1]],cmap='RdBu_r')
-line1, = plt.plot((t[tc],t[tc]),(x[0],x[-1]), color='w', ls=':')
-plt.ylabel("x (m)")
-plt.xlabel("t (s)")
-plt.subplot(122)
-line2, = plt.plot(x,T[tc,:], label="t = %.2f sec" % t[tc])
-line2, = plt.plot(x,T[tc,:], label="t = %.2f sec" % t[tc])
-plt.ylabel("Temperature (C)")
-plt.xlabel("x (m)")
-plt.legend()
-
-def explore_plot(tc=0):
-    line1.set_data((t[tc],t[tc]),(x[0],x[-1]))
-    line2.set_data(x,T[tc,:])
-    line2.set_label("t = %.2f sec" % t[tc])
-    plt.legend()
-    
-interact(explore_plot, tc=(0,len(t)-1,100))
-```
-
-Another way to visualize this is with an animation. The following two code cells allow you to create an animation of the temperature profile as a function of time.
-
-```python
-%matplotlib inline
-plt.rcParams['figure.dpi'] = 100
-```
+Let's take a look at the results. A nice way to visualize this is with an animation. The following two code cells allow you to create an animation of the temperature profile as a function of time.
 
 ```python nbgrader={"grade": false, "grade_id": "cell-e3116ce3d6c79a7c", "locked": false, "schema_version": 3, "solution": true, "task": false}
 %%capture
