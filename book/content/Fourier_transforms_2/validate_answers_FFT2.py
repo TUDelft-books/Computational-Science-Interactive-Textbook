@@ -1,9 +1,9 @@
 """
 This one is hard-coded for FFT2 because the values.json was too big for git.
-It was split across values_part_1.json and values_answer_8_2c_1.json
-The user should not notice the difference but the check_answer function
-reads both files and combines them into a single dict.
-The answer 8 couldn't even be stored as a json, it had to be compressed into a npy.
+It was split across values_part_1.json and values_answer_8_2c_1
+The user should not notice the difference but the check_answer function reads
+from file if the question is not 8 2c 1, but if it is then this is computed
+on the fly - see the final function.
 """
 import json
 import os.path
@@ -12,7 +12,6 @@ import numpy as np
 # A library for saving and checking answers for notebooks
 
 location = "./values_part_1.json"
-location2 = "./values_answer_8_2c_1.npy"
 
 # For outputting matrices in a somewhat readable way...
 def format_difference(A,B,atol):
@@ -59,16 +58,15 @@ def check_answer(value, key, atol=None):
         return(True, "")
     # Load the two partial files and combine them 
     with open(location) as f:
-        d1 = json.load(f)
-    array_for_answer_8_2c_1 = np.load(location2, allow_pickle=True)
-    d2 = {'answer_8_2c_1': list(array_for_answer_8_2c_1)}
-    d = d1|d2 # Combine the partial dicts into one dict
-
-    try:
-        sol_answer = np.array(d[key]) 
-    except: 
-        print("Missing key, instructor must run all cells to generate and save answers")
-        return(True, "")
+        d = json.load(f)
+    if key == "answer_8_2c_1":
+        sol_answer = compute_answer_8_2c_1()
+    else:
+        try:
+            sol_answer = np.array(d[key]) 
+        except: 
+            print("Missing key, instructor must run all cells to generate and save answers")
+            return(True, "")
         
     student_answer = np.array(value)
 
@@ -98,9 +96,25 @@ def check_answer(value, key, atol=None):
         str(format_difference(sol_answer, student_answer, atol))
         return (False, msg)
 
+def compute_answer_8_2c_1():
+    """
+    This answer is too large to be stored uncompressed, and using either hdf5 or npy
+    files seems to corrupt with Jupyterbook, so this one will be computed on the fly
+    rather than loaded from file.
+    """
+    N = 2000
+    x = np.linspace(-N/2,N/2,N+1)
+    y = np.linspace(-N/2,N/2,N+1)
+    X, Y = np.meshgrid(x, y)
+    M =  np.sqrt(X**2 + Y**2) < 50
+    Mt = np.fft.fft2(M)
+    diffraction_pattern = np.abs(np.fft.fftshift(Mt))**2
+    return diffraction_pattern
+
+
 """
 student_answer = np.array([1.0,2.0,3.0])
 sol_answer = np.array([1,np.nan,np.nan])
 
-check_answer(sol_answer, "answer_3_01_1")
-""" 
+check_answer(sol_answer, "answer_8_2c_1")
+"""
