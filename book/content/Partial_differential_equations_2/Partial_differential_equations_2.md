@@ -33,7 +33,6 @@ from time import time
 import matplotlib.animation
 from scipy.fftpack import dst,idst
 
-%matplotlib notebook
 plt.rcParams['figure.dpi'] = 100
 plt.rcParams["animation.html"] = "jshtml"
 ```
