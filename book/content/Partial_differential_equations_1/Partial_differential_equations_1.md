@@ -271,7 +271,7 @@ answer_13_1a_2 = delta_max_list.copy()
 ```
 
 
-To explore your data, you can use this function to make a handy interactive "data explorer" that I wrote (see code in `resource/asnlib/public/explore_image.py` if you are interested) that can show you both color scale plots and also line cuts. 
+To explore your data, you can use this function to make a handy interactive "data explorer" that I wrote (see code in `./explore_image.py` if you are interested) that can show you both color scale plots and also line cuts. 
 
 Now let's use this function to explore the $\phi$ that you calculated:
 
@@ -292,6 +292,7 @@ plt.plot(answer_13_1a_2)
 plt.yscale('log')
 plt.ylabel("$\Delta \phi_{max}$ (V)")
 plt.xlabel("Iteration number")
+plt.show()
 ### END SOLUTION
 ```
 
@@ -436,6 +437,7 @@ plt.yscale('log')
 plt.ylabel("$\Delta \phi_{max}$ (V)")
 plt.xlabel("Iteration number")
 plt.legend()
+plt.show()
 ### END SOLUTION
 ```
 
@@ -561,6 +563,7 @@ plt.yscale('log')
 plt.ylabel("$\Delta \phi_{max}$ (V)")
 plt.xlabel("Iteration number")
 plt.legend()
+plt.show()
 ### END SOLUTION
 ```
 
