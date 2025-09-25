@@ -29,12 +29,34 @@ In this lecture, we will explore numerically solving partial differential equati
 # Notebook code
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import colors
 from time import time
-
-from explore_image import explore_image
-plt.rcParams['figure.dpi'] = 100
-%matplotlib widget
 ```
+
+This will be a handy plotting function that we'll use a few times later.
+```python
+def visualise(array, normalisation=0.5, line_cut_y=80):
+    fig, axes = plt.subplots(1, 2, figsize=(12,6))
+
+    lims = [0, len(array[0])-1] # Assumes square matrix
+    zlims = [np.min(array), np.max(array)]
+    assert line_cut_y < lims[-1], "The line_cut_y you ask for should be less than the size of the array"
+
+    norm = colors.PowerNorm(gamma=normalisation, vmin=np.min(array), vmax=np.max(array))
+    axes[0].imshow(array, cmap='RdBu_r', origin='lower',aspect='auto', norm=norm)
+    axes[0].hlines(y=line_cut_y, xmin=0, xmax=len(array[0]), color='black', linestyle='--')
+    axes[0].set_ylim(*lims)
+    axes[0].set_xlim(*lims)
+    axes[0].set_xlabel('x')
+    axes[0].set_ylabel('y')
+
+    axes[1].plot(array[line_cut_y], color='black', linestyle='--')
+    axes[1].set_ylim(*zlims)
+    axes[1].set_xlabel('x')
+    axes[1].set_ylabel('z')
+    return fig
+```
+
 
 ## Poisson's equation in 2D
 
@@ -271,12 +293,13 @@ answer_13_1a_2 = delta_max_list.copy()
 ```
 
 
-To explore your data, you can use this function to make a handy interactive "data explorer" that I wrote (see code in `./explore_image.py` if you are interested) that can show you both color scale plots and also line cuts. 
+To explore your data, you can use the plotting function from the top of the page to make a handy "data explorer" that can show you both color scale plots and also line cuts. 
 
 Now let's use this function to explore the $\phi$ that you calculated:
 
 ```python nbgrader={"grade": false, "grade_id": "cell-2d41400e07d503c1", "locked": true, "schema_version": 3, "solution": false, "task": false}
-explore_image(answer_13_1a_1)
+fig = visualise(answer_13_1a_1, normalisation=0.5, line_cut_y=80)
+fig.show()
 ```
 
 **Exercise 1(b):** Make a plot of `delta_max` as a function of the iteration number. The y-axis should be a log scale. As always, your plot should have appropriate labels with units where applicable.
@@ -417,7 +440,8 @@ You can check that it looks the same:
 
 ```python nbgrader={"grade": false, "grade_id": "cell-1bf7a18ed109d0e1", "locked": true, "schema_version": 3, "solution": false, "task": false}
 # Notebook code
-explore_image(answer_13_2a_1)
+fig = visualise(answer_13_2a_1, normalisation=0.5, line_cut_y=80)
+fig.show()
 ```
 
 Although the code is not that much faster in total time (because of the slightly more complicated stuff going on in the `for` loops), it converges in fewer iterations.
@@ -544,7 +568,8 @@ By now, I guess you trust that the technique works, but you can also take a look
 
 ```python nbgrader={"grade": false, "grade_id": "cell-dba7aebb72d944a5", "locked": true, "schema_version": 3, "solution": false, "task": false}
 # Notebook code 
-explore_image(answer_13_3a_1)
+fig = visualise(answer_13_3a_1, normalisation=0.5, line_cut_y=80)
+fig.show()
 ```
 
 **Exercise 3(b):** Make a plot of `delta_max` vs iteration number for the three techniques. 
@@ -675,7 +700,8 @@ answer_13_4a_2 = rho_fixed.copy()
 
 ```python nbgrader={"grade": false, "grade_id": "cell-6ac9674a29b3cb7b", "locked": true, "schema_version": 3, "solution": false, "task": false}
 # Notebook code
-explore_image(answer_13_4a_1)
+fig = visualise(answer_13_4a_1, normalisation=0.5, line_cut_y=80)
+fig.show()
 ```
 
 ## Calculating charge distributions
@@ -892,7 +918,8 @@ What strange thing do you see at "linecut" = 2 with "Autoscale linecut" on? If y
 Post in the forum if you're stuck and would like the answer :)
 
 ```python nbgrader={"schema_version": 3, "solution": true, "grade": false, "locked": false, "task": false, "grade_id": "cell-e2494f2742ba74a9"}
-explore_image(-answer_13_5b_1,zname='$\sigma$')
+fig = visualise(-answer_13_5b_1, normalisation=0.5, line_cut_y=80)
+fig.show()
 ```
 
 What do you expect the total charge to be in your simulation? Use `np.sum()` to check your answer. Compare this number to the external charge you put on the center pixel in the simulation. Does this make sense? How could you make it better? 
