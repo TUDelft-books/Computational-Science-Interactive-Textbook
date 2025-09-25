@@ -11,3 +11,4 @@ parts:
    - file: content/Fourier_transforms_1/Fourier_transforms_1.ipynb
    - file: content/Fourier_transforms_2/Fourier_transforms_2.ipynb
    - file: content/Random_numbers/Random_numbers.ipynb
+   - file: content/Ordinary_differential_equations_1/Ordinary_differential_equations_1.ipynb
