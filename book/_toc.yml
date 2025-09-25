@@ -14,3 +14,4 @@ parts:
    - file: content/Ordinary_differential_equations_1/Ordinary_differential_equations_1.ipynb
    - file: content/Ordinary_differential_equations_2/Ordinary_differential_equations_2.ipynb
    - file: content/Partial_differential_equations_1/Partial_differential_equations_1.ipynb
+   - file: content/Partial_differential_equations_2/Partial_differential_equations_2.ipynb
