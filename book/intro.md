@@ -21,7 +21,7 @@ This JupyterBook offers an interactive environment for you to learn about, and i
 
 *However*, one key difference is that your work is not saved in this JupyterBook! You can save a PDF version of what you have done by clicking the 'Download'-looking icon within each section; you will also see an option to download the `.ipynb` file, too, so you can keep these exercises and try them locally if you wish (but downloading this way does not keep your progress, it just downloads the state of the notebook before you changed it, unlike downloading the PDF!).
 
-The solutions are provided alongside the questions. They are hidden under the 'show source code' buttons so can be accessed at any time if you lose your progress. Please try and solve the problem yourself first, and run the cells for checking your answers to get feedback *before* resorting to checking the answer. 
+The solutions are provided alongside the questions. They are hidden under the 'show code cell source' buttons so can be accessed at any time if you lose your progress. Please try and solve the problem yourself first, and run the cells for checking your answers to get feedback *before* resorting to checking the answer. 
 
 (At the bottom of each page there is one further 'see source code' drop down, you can ignore this as it just loads some things for you when you first launch the page.)
 # Some key resources
