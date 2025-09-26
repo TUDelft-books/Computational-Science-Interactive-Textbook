@@ -18,11 +18,11 @@ This JupyterBook offers an interactive environment for you to learn about, and i
 
 The solutions are provided alongside the questions. They are hidden under the 'show code cell source' buttons so can be accessed at any time if you lose your progress. Please try and solve the problem yourself first, and run the cells for checking your answers to get feedback *before* resorting to checking the answer. 
 
-# Prerequisities
+## Prerequisities
 You will need basic familiarity with python. You should be able to work with function and be proficient in numpy.
 If you need a refresher of the basics before you start, have a look at [Introduction to Python for Physicists](https://gitlab.tudelft.nl/python-for-applied-physics/practicum-lecture-notes) (if you are a TU Delft student, this corresponds to TN1405 material)
 
-# What you can expect to learn
+## What you can expect to learn
 On a high level, our goal is that after this course you are able to simulate problems in physics using Python. The topics we will cover are:
 
 * Numerical Differentiation
@@ -34,7 +34,7 @@ On a high level, our goal is that after this course you are able to simulate pro
 * Ordinary Differential Equations 
 * Partial Differential Equations 
 
-# For TU Delft students
+## For TU Delft students
 
 * You can ask and answer questions to and from fellow course members, TAs, and teachers at the [forum](https://tn2513-forum.quantumtinkerer.tudelft.nl/).
 * You can see more up-to-date information about grading, assignment, midterm, and final exam dates at [Brightspace](https://brightspace.tudelft.nl/) (search for TN2513).
