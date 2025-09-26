@@ -1,6 +1,10 @@
 format: jb-book
 root: intro
 parts: 
+ - caption: Introduction
+   numbered: False
+   chapters: 
+   - file: introduction.md
  - caption: Course Content
    numbered: True
    chapters: 
