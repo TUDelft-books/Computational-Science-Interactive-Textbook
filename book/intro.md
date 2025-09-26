@@ -16,6 +16,11 @@ Jupyter notebooks are a way of interacting with the python programming language 
 
 This same feature makes them very useful for teaching, as we can combine both the conceptual learning material with code and exercises all in one document, which will will do extensively throughout the course.
 
+## About this book
+This JupyterBook offers an interactive environment for you to learn about, and implement, the algorithms in this course. Those familiar with the Vocareum set-up shouldn't notice much difference with the Jupyter Notebook layout.
+
+*However*, one key difference is that your work is not saved in this JupyterBook! You can save a PDF version of what you have done by clicking the 'Download'-looking icon within each section; you will also see an option to download the `.ipynb` file, too, so you can keep these exercises and try them locally if you wish (but downloading this way does not keep your progress, it just downloads the state of the notebook before you changed it, unlike downloading the PDF!).
+
 # Some key resources
 
 * You can ask and answer questions to and from fellow course members, TAs, and teachers at the [forum](https://tn2513-forum.quantumtinkerer.tudelft.nl/).
