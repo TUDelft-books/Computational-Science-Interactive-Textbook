@@ -1,4 +1,4 @@
-# About the course
+# Introduction
 In this course, you will learn to solve problems in physics using computational tools by programming these problems into a computer.
 
 ## Why are programming and computational tools important in physics?
