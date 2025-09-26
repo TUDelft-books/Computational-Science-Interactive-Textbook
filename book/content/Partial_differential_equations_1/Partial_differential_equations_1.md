@@ -35,25 +35,33 @@ from time import time
 
 This will be a handy plotting function that we'll use a few times later.
 ```python
-def visualise(array, normalisation=0.5, line_cut_y=80):
-    fig, axes = plt.subplots(1, 2, figsize=(12,6))
+def visualise(array, normalisation=0.5, line_cut_y=80, autoscale=False):
+    fig, axes = plt.subplots(1, 2, figsize=(14,6))
 
     lims = [0, len(array[0])-1] # Assumes square matrix
     zlims = [np.min(array), np.max(array)]
-    assert line_cut_y < lims[-1], "The line_cut_y you ask for should be less than the size of the array"
+    assert line_cut_y < lims[-1], "The line_cut_y that you ask for should be less than the size of the array"
+    assert isinstance(line_cut_y, int), "The line_cut_y that you ask for should be a whole number (integer)"
 
     norm = colors.PowerNorm(gamma=normalisation, vmin=np.min(array), vmax=np.max(array))
-    axes[0].imshow(array, cmap='RdBu_r', origin='lower',aspect='auto', norm=norm)
+    im = axes[0].imshow(array, cmap='RdBu_r', origin='lower',aspect='auto', norm=norm)
     axes[0].hlines(y=line_cut_y, xmin=0, xmax=len(array[0]), color='black', linestyle='--')
+    plt.colorbar(im, ax=axes[0], cmap='RbBu_r', label='z')
+
     axes[0].set_ylim(*lims)
     axes[0].set_xlim(*lims)
     axes[0].set_xlabel('x')
     axes[0].set_ylabel('y')
 
     axes[1].plot(array[line_cut_y], color='black', linestyle='--')
-    axes[1].set_ylim(*zlims)
     axes[1].set_xlabel('x')
     axes[1].set_ylabel('z')
+    if autoscale:
+        axes[1].relim()
+        axes[1].autoscale_view()
+    else:
+        axes[1].set_ylim(*zlims)
+        axes[1].autoscale_view()
     return fig
 ```
 
@@ -918,7 +926,7 @@ What strange thing do you see at "linecut" = 2 with "Autoscale linecut" on? If y
 Post in the forum if you're stuck and would like the answer :)
 
 ```python nbgrader={"schema_version": 3, "solution": true, "grade": false, "locked": false, "task": false, "grade_id": "cell-e2494f2742ba74a9"}
-fig = visualise(-answer_13_5b_1, normalisation=0.5, line_cut_y=80)
+fig = visualise(-answer_13_5b_1, normalisation=0.148, line_cut_y=1, autoscale=True)
 fig.show()
 ```
 
