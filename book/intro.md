@@ -16,34 +16,40 @@ Jupyter notebooks are a way of interacting with the python programming language 
 
 This same feature makes them very useful for teaching, as we can combine both the conceptual learning material with code and exercises all in one document, which will will do extensively throughout the course.
 
+# Some key resources
+
+* You can ask and answer questions to and from fellow course members, TAs, and teachers at the [forum](https://tn2513-forum.quantumtinkerer.tudelft.nl/).
+* You can see more up-to-date information about grading, assignment, midterm, and final exam dates at [Brightspace](https://brightspace.tudelft.nl/d2l/home/775771).
+* You can run these same notebooks in the Vocareum environment if you prefer, available through the Brightspace (click 'Content' and then 'GO TO VOCAREUM' in the course description).
+
 # What you can expect to learn
 On a high level, our goal is that after this course you are able to simulate problems in physics using Python. The topics we will cover are:
 
-Week 1:
-* Review of [Introduction to Python for Physicists](https://gitlab.tudelft.nl/python-for-applied-physics/practicum-lecture-notes) (TN1405 material)
-* Numerical Differentiation
-* Numerical Integration
-Week 2: 
-* Root finding
-* Linear algebra
-Week 3: 
-* Practice Assignment
-* Fourier transforms 1
-Week 4: 
-* Fourier transforms 2
-* Practice midterm
-Week 5: 
-* Random numbers
-* Ordinary Differential Equations 1
-Week 6: 
-* Ordinary Differential Equations 2
-* Practice Assignment
-Week 7: 
-* Partial Differential Equations 1
-* Partial Differential Equations 2
-Week 8:
-* Practice Exam
-* Review and catch-up
+* Week 1:
+    * Review of [Introduction to Python for Physicists](https://gitlab.tudelft.nl/python-for-applied-physics/practicum-lecture-notes) (TN1405 material)
+    * Numerical Differentiation
+    * Numerical Integration
+* Week 2: 
+    * Root finding
+    * Linear algebra
+* Week 3: 
+     * Practice Assignment
+    * Fourier transforms 1
+* Week 4: 
+    * Fourier transforms 2
+    * Practice midterm
+* Week 5: 
+    * Random numbers
+    * Ordinary Differential Equations 1
+* Week 6: 
+    * Ordinary Differential Equations 2
+    * Practice Assignment
+* Week 7: 
+    * Partial Differential Equations 1
+    * Partial Differential Equations 2
+* Week 8:
+    * Practice Exam
+    * Review and catch-up
 
 In week 1, we include some review material (the same lecture notebooks as in Inleidend practicum TN1405), but now with some autograded exercises inline so you can test your knowledge of the material (no assignments).
 
