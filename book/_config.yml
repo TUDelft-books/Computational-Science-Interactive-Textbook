@@ -19,10 +19,10 @@ sphinx:                                              # Options passed on to the 
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"] #exclude files which should not be accessible for live code: https://teachbooks.io/manual/features/live_code.html
     html_theme_options:
       logo:
-        text: Template                               # Replace this with your own book title
-        image_light: TeachBooks_logo.svg             # Put your logo for the light mode here (can be the same as image_dark)
-        image_dark: TeachBooks_logo_inverted.svg     # Put your logo for the dark mode here (can be the same as image_light)
-      repository_url: "https://github.com/user/repo" # Add your own repo URL here  TODO
+        text: Computational Science TN2513           # Replace this with your own book title
+        image_light: logo.jpg             # Put your logo for the light mode here (can be the same as image_dark)
+        image_dark: logo.jpg     # Put your logo for the dark mode here (can be the same as image_light)
+      repository_url: "https://github.com/thomas-spriggs-codes/computational_science_book" # Add your own repo URL here  TODO
       path_to_docs: "book"                           # Required for edit_page_button, should be book if you're using TeachBooks package (https://github.com/TeachBooks/TeachBooks) or the TeachBooks deploy book workflow (https://teachbooks.io/manual/external/deploy-book-workflow/README.html)
       repository_branch: "main"                      # Replace when you change the name of your published branch (required for edit_page_button)
       use_edit_page_button: true                     # Replace with false if you don't want the edit page button (i.e. if you don't user to propose changes themselves or have a private repo)
