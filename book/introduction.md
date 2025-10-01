@@ -42,3 +42,13 @@ On a high level, our goal is that after this course you are able to simulate pro
 
 For each of the lectures, there are also lecture-specific learning objectives that should give you a clear idea of what you are expected to be able to do. The collection of all of these can be found on the course page on Brightspace.
 
+## Citing this book
+If this book leads to any scientific work then please cite it using the following:
+```
+@book{steele2025computationalscience,
+    title = "Computational Science: Interactive Textbook",
+    author = "Gary Steele, Jeroen Kalkman, Thomas Spriggs, and Eliska Greplova",
+    year = "2025",
+    note={\url{oit.tudelft.nl/}}, #TODO add newest name
+}
+```

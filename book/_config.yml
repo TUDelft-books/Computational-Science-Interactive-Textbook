@@ -1,7 +1,5 @@
-title: TeachBooks template                           # Replace this with your own book title
+title: Computational Science: Interactive Textbook   # Replace this with your own book title
 author: Gary Steele, Jeroen Kalkman, Thomas Spriggs, and Eliska Greplova built with <a href="https://teachbooks.tudelft.nl/">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a>
-email: T.R.vanWoudenberg@tudelft.nl 
-                                                     # Replace TeachBooks Teams with your own name in the line above
 
 execute:
   execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build
@@ -19,7 +17,7 @@ sphinx:                                              # Options passed on to the 
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"] #exclude files which should not be accessible for live code: https://teachbooks.io/manual/features/live_code.html
     html_theme_options:
       logo:
-        text: Computational Science TN2513           # Replace this with your own book title
+        text: Computational Science: Interactive Textbook           # Replace this with your own book title
         image_light: logo.jpg             # Put your logo for the light mode here (can be the same as image_dark)
         image_dark: logo.jpg     # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/thomas-spriggs-codes/computational_science_book" # Add your own repo URL here  TODO
@@ -32,7 +30,6 @@ sphinx:                                              # Options passed on to the 
         thebe: true                                  # Required for live code: https://teachbooks.io/manual/features/live_code.html
     html_show_copyright: false                       # As the copyright is included in the author field
     html_last_updated_fmt: '%B %-d, %Y'              # Adds the date of the last update to the footer
-    html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s)
     mathjax3_config:
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier
@@ -48,6 +45,3 @@ sphinx:                                              # Options passed on to the 
     - sphinx_dropdown_toggle                         # Adds a button to toggle all dropdowns with one click
     - sphinx_proof                                   # Allows you to add various mathy admonitions to your book: https://sphinx-proof.readthedocs.io/en/latest/
     - sphinx_code_examples                           # Allows you to include code blocks in examples: https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html
-
-bibtex_bibfiles: 
-  - references.bib                                   # Required for references
