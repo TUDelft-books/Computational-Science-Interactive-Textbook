@@ -16,6 +16,6 @@ If this book leads to any scientific work then please cite it using the followin
     title = "Computational Science: Interactive Textbook",
     author = "Gary Steele, Jeroen Kalkman, Thomas Spriggs, and Eliska Greplova",
     year = "2025",
-    note={\url{oit.tudelft.nl/}}, #TODO add newest name
+    note={\url{https://oit.tudelft.nl/Computational-Science-Interactive-Textbook/main/intro.html}}, 
 }
 ```
