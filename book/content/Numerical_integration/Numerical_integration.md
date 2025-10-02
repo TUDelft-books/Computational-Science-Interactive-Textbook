@@ -503,15 +503,12 @@ Every element in your output array is then conceptually defined by computing an 
 
 _Recommendation_ "<a href=https://en.wikipedia.org/wiki/Modular_programming>Modularize</a>" your code by creating a function that does the trapezoidal integration of an array, this will make your code easier to write and use. 
 
-```python
-# Download the resource files.
-import urllib
-urllib.request.urlretrieve("http://www-personal.umich.edu/~mejn/cp/data/velocities.txt", 
-                           filename="velocities.txt")
-```
 
 ```python
 # Load the data
+data= np.loadtxt("velocities.dat")
+# t = ...
+# v = ...
 
 # A function for calculating the trapezoidal integral of an array:
 def trapezoid(x):
@@ -545,7 +542,7 @@ assert passed == True, feedback
 ``` python tags=["hide-input"] 
 # Load the data
 ### BEGIN SOLUTION
-data= np.loadtxt("resource/asnlib/public/velocities.dat")
+data= np.loadtxt("velocities.dat")
 t = data[:,0]
 v = data[:,1]
 

@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Computational Science: Interactive Textbook'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Gary
+    family-names: Steele
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0003-1032-6226'
+  - given-names: Jeroen
+    family-names: Kalkman
+    orcid: 'https://orcid.org/0000-0003-1698-7842'
+    affiliation: Delft University of Technology
+  - given-names: Thomas
+    family-names: Spriggs
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0001-7513-6437'
+  - given-names: Eliska
+    family-names: Greplova
+    affiliation: Delft University of Technology
+    orcid: 'https://orcid.org/0000-0003-3369-2544'
+license: CC-BY-4.0

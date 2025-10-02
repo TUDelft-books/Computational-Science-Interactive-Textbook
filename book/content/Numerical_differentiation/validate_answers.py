@@ -6,10 +6,6 @@ import numpy as np
 
 location = "./values.json"
 
-def unique():
-    print("NEW CONTENT")
-    return True
-
 # For outputting matrices in a somewhat readable way...
 def format_difference(A,B,atol):
     A = A.astype(float) ## the solution
